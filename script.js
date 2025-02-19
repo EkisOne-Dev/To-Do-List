@@ -13,8 +13,8 @@ function addTask() {
 function showTasks() {
     const list = document.getElementById('list');
     list.innerHTML = '';
-    tasks.foeEach((task, index) => {
-        list.innerHTML += '<li>${task} <button onclick="deleteTask(${index})">Delete</button></li>';
+    tasks.forEach((task, index) => {
+        list.innerHTML += `<li>${task} <button onclick="deleteTask(${index})">Delete</button></li>`;
     });
 }
 
